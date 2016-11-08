@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+
+        maven { url "http://172.28.10.222:8081/nexus/content/groups/android_public/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0'
+
+        classpath "io.realm:realm-gradle-plugin:2.1.1"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+
+        maven { url "http://172.28.10.222:8081/nexus/content/groups/android_public/" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
